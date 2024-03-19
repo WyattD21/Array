@@ -6,6 +6,27 @@
 const int NUM_RUNNERS = 5;
 const int NUM_DAYS = 7;
 
+// Program Overview:
+// This program reads data from an input file named 'runners.txt', calculates total miles
+// and average miles for each runner, and displays the results in a formatted table.
+//
+// Input:
+// The program requires an input file named 'runners.txt' to exist in the correct location.
+// Each line of the file should contain the runner's name followed by the miles run each day
+// of the week.
+//
+// Processing:
+// 1. The readData function reads data for each runner from the input file.
+// 2. The calculateStats function calculates total miles and average miles for each runner.
+// 3. The displayResults function displays the results in a formatted table.
+//
+// Output:
+// The program outputs a table displaying:
+// - Runner's name
+// - Miles run each day of the week
+// - Total miles run for the week
+// - Average miles run per d
+
 // Function Prototypes:
 void readData(std::string names[], int miles[][NUM_DAYS]);
 // Preconditions: Input file 'runners.txt' exists in the correct location.
