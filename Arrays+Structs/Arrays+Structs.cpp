@@ -2,14 +2,22 @@
 #include <iomanip>
 #include <fstream>
 #include <string>
-#include <cstdlib> // For exit()
 
 const int NUM_RUNNERS = 5;
 const int NUM_DAYS = 7;
 
+// Function Prototypes:
 void readData(std::string names[], int miles[][NUM_DAYS]);
+// Preconditions: Input file 'runners.txt' exists in the correct location.
+// Postconditions: 'names' and 'miles' arrays are populated with data for each runner.
+
 void calculateStats(const std::string names[], const int miles[][NUM_DAYS], double totals[], double averages[]);
+// Preconditions: 'names' and 'miles' arrays contain valid data for each runner.
+// Postconditions: 'totals' and 'averages' arrays are filled with calculated values.
+
 void displayResults(const std::string names[], const int miles[][NUM_DAYS], const double totals[], const double averages[]);
+// Preconditions: 'names', 'miles', 'totals', and 'averages' arrays contain valid data.
+// Postconditions: Results are displayed in a formatted table.
 
 int main() {
     std::string names[NUM_RUNNERS];
@@ -23,6 +31,8 @@ int main() {
 
     return 0;
 }
+
+// Function Definitions...
 
 void readData(std::string names[], int miles[][NUM_DAYS]) {
     std::ifstream inputFile("runners.txt");
@@ -75,4 +85,3 @@ void displayResults(const std::string names[], const int miles[][NUM_DAYS], cons
         std::cout << std::setw(12) << std::right << std::fixed << std::setprecision(2) << averages[i] << std::endl;
     }
 }
-
